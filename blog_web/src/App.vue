@@ -8,10 +8,7 @@
 <script>
 import HelloWorld from "./components/Hello";
 export default {
-  name: 'App',
-  comments:{
-      Hello
-  }
+  name: 'App'
 }
 </script>
 
