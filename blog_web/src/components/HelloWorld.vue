@@ -7,6 +7,7 @@
     {{1+10}}<br>
     {{ok?'YES':'NO'}}<br>
     {{message.split('').reverse().join("")}}
+
     <div v-bind:id="'list-'+id">测试教程</div>
     <p  v-if="seen">现在你看到我了！</p>
     <pre><a v-bind:href="url">gitee.com</a></pre>
@@ -37,14 +38,12 @@ export default {
           return this.show +" - 测试的世界真是美滋滋"
         },
         doSomething:function () {
-            return this.seen=true
-        },
-        Utest:function (value) {
-            if(!value){
-                return ''
-            }
-            value = value.toString()
-            return value.charAt(0).toUpperCase()+value.slice(1)
+           return  this.$axios.get("http://localhost:8081/core_start/user/login",{params:{username:'matthew',password:'1996'}}) .then(function (response) {
+                console.log(response);
+            })
+                .catch(function (error) {
+                    console.log(error);
+                });
         }
     }
 }
