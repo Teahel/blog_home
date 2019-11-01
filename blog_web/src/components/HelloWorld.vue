@@ -11,6 +11,7 @@
     <p  v-if="seen">现在你看到我了！</p>
     <pre><a v-bind:href="url">gitee.com</a></pre>
     <h6>    <a v-on:click="doSomething">点击事件</a>    </h6>
+
     {{message|Utest}}
 
 
@@ -32,9 +33,9 @@ export default {
     }
   },
     methods:{
-      count:function(){
+        count:function(){
           return this.show +" - 测试的世界真是美滋滋"
-      },
+        },
         doSomething:function () {
             return this.seen=true
         },
