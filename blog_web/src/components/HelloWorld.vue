@@ -13,8 +13,6 @@
     <pre><a v-bind:href="url">gitee.com</a></pre>
     <h6>    <a v-on:click="doSomething">点击事件</a>    </h6>
 
-    {{message|Utest}}
-
 
   </div>
 </template>
@@ -38,7 +36,7 @@ export default {
           return this.show +" - 测试的世界真是美滋滋"
         },
         doSomething:function () {
-           return  this.$axios.get("http://localhost:8081/core_start/user/login",{params:{username:'matthew',password:'1996'}}) .then(function (response) {
+           return  this.$axios.get("http://39.108.125.164:8080/core_start/user/login",{params:{username:'matthew',password:'1996'}}) .then(function (response) {
                 console.log(response);
             })
                 .catch(function (error) {
