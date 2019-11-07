@@ -46,7 +46,7 @@ export default {
                 alert(response.data.msg+"  "+response.data.code);
             }
             console.log(response);
-        })
+            })
             .catch(function (error) {
                 console.log(error);
             });
